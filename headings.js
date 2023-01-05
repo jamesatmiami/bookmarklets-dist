@@ -327,7 +327,6 @@
                 return "heading";
             case "header":
                 if (!(0, u.isDescendantOf)(e, ["article", "section"])) return "banner";
-                if(u.hasAttribute('aria-level')) return "heading";
                 break;
             case "hr":
                 return "separator";
@@ -377,6 +376,8 @@
                 break;
             case "output":
                 return "status";
+            case "p":
+                if((u.hasAttribute("role") && u.getAttribute("role") == "heading") && u.hasAttribute("aria-level")) return "heading";
             case "progress":
                 return "progressbar";
             case "section":
