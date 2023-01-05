@@ -377,7 +377,7 @@
             case "output":
                 return "status";
             case "p":
-                if(u.hasAttribute("role") && u.getAttribute("role") == "heading") return "heading";
+                if(u.hasAttribute("role") && u.getAttribute("role") == "heading") //return "heading";
                 console.log("I found a p tag that may be a heading!")
                 break;
             case "progress":
