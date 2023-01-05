@@ -378,6 +378,8 @@
                 return "status";
             case "p":
                 if((u.hasAttribute("role") && u.getAttribute("role") == "heading") && u.hasAttribute("aria-level")) return "heading";
+                console.log("I found a p tag that may be a heading!")
+                break;
             case "progress":
                 return "progressbar";
             case "section":
