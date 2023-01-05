@@ -42,11 +42,11 @@
                 selector: "h6",
                 color: "brown",
                 label: "h6"
-            }, {
+            }/*, {
                 selector: "[aria-level='1']",
                 color: "navy",
                 label: "h1"
-            }],
+            }*/],
             r = t.map(function (e) {
                 return e.selector
             }).join(", "),
