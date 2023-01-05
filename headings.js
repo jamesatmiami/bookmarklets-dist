@@ -42,11 +42,11 @@
                 selector: "h6",
                 color: "brown",
                 label: "h6"
-            }/*, {
-                selector: "[aria-level='1']",
+            }, {
+                selector: "[role=heading]",
                 color: "navy",
                 label: "h1"
-            }*/],
+            }],
             r = t.map(function (e) {
                 return e.selector
             }).join(", "),
@@ -376,10 +376,6 @@
                 break;
             case "output":
                 return "status";
-            case "p":
-              //  if(u.hasAttribute("role") && u.getAttribute("role") == "heading") //return "heading";
-                console.log("I found a p tag that may be a heading!")
-                break;
             case "progress":
                 return "progressbar";
             case "section":
