@@ -43,7 +43,7 @@
                 color: "brown",
                 label: "h6"
             }, {
-                selector: "[role=heading aria-level='1']",
+                selector: "[aria-level='1']",
                 color: "navy",
                 label: "h1"
             }],
@@ -377,7 +377,7 @@
             case "output":
                 return "status";
             case "p":
-                if((u.hasAttribute("role") && u.getAttribute("role") == "heading") && u.hasAttribute("aria-level")) return "heading";
+                if(u.hasAttribute("role") && u.getAttribute("role") == "heading") return "heading";
                 console.log("I found a p tag that may be a heading!")
                 break;
             case "progress":
