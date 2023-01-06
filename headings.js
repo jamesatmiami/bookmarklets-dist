@@ -18,7 +18,6 @@
             var r = new a.InfoObject(e, "HEADING INFO");
             return r.addProps("level " + t.label.substring(1)), r
         }(0, s.addPolyfills)();
-        console.log("selectors being looked at");
         var t = [{
                 selector: "h1",
                 color: "navy",
@@ -44,7 +43,7 @@
                 color: "brown",
                 label: "h6"
             }, {
-                selector: "[aria-level]",
+                selector: "[aria-level='1']",
                 color: "navy",
                 label: "h1"
             }],
@@ -281,7 +280,6 @@
     }
 
     function a(e) {
-        console.log("function a is running");
         var t = e.tagName.toLowerCase(),
             r = e.type;
         if (e.hasAttribute("role"))
@@ -329,8 +327,6 @@
             case "h6":
                 return "heading";
             case "header":
-                console.log("header role found");
-                if(u.hasAttribute("aria-level")) return "heading";
                 if (!(0, u.isDescendantOf)(e, ["article", "section"])) return "banner";
                 break;
             case "hr":
@@ -612,7 +608,7 @@
         }
         return r
     }
-
+//Where the text for the tooltip is generated
     function o(e) {
         var t = "",
             r = e.title,
