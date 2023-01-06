@@ -43,7 +43,7 @@
                 color: "brown",
                 label: "h6"
             }, {
-                selector: "[role=heading]",
+                selector: "[aria-level=1]",
                 color: "navy",
                 label: "h1"
             }],
