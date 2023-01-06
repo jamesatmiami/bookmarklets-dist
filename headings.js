@@ -280,6 +280,7 @@
     }
 
     function a(e) {
+        console.log("function a is running");
         var t = e.tagName.toLowerCase(),
             r = e.type;
         if (e.hasAttribute("role"))
@@ -327,6 +328,7 @@
             case "h6":
                 return "heading";
             case "header":
+                console.log("header role found");
                 if(u.hasAttribute("aria-level")) return "heading";
                 if (!(0, u.isDescendantOf)(e, ["article", "section"])) return "banner";
                 break;
