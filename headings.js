@@ -43,7 +43,7 @@
                 color: "brown",
                 label: "h6"
             }, {
-                selector: "[aria-level=1]",
+                selector: "[aria-level]",
                 color: "navy",
                 label: "h1"
             }],
@@ -282,7 +282,8 @@
     function a(e) {
         var t = e.tagName.toLowerCase(),
             r = e.type;
-        if (e.hasAttribute("role")) return o((0, l.getAttributeValue)(e, "role"));
+        if (e.hasAttribute("role"))
+         return o( (0, l.getAttributeValue)(e, "role") );
         switch (t) {
             case "a":
                 if (e.hasAttribute("href")) return "link";
@@ -326,8 +327,8 @@
             case "h6":
                 return "heading";
             case "header":
-                if (!(0, u.isDescendantOf)(e, ["article", "section"])) return "banner";
                 if(u.hasAttribute("aria-level")) return "heading";
+                if (!(0, u.isDescendantOf)(e, ["article", "section"])) return "banner";
                 break;
             case "hr":
                 return "separator";
