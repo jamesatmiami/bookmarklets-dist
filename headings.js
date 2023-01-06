@@ -18,6 +18,7 @@
             var r = new a.InfoObject(e, "HEADING INFO");
             return r.addProps("level " + t.label.substring(1)), r
         }(0, s.addPolyfills)();
+        console.log("selectors being looked at");
         var t = [{
                 selector: "h1",
                 color: "navy",
