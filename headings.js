@@ -43,7 +43,7 @@
                 color: "brown",
                 label: "h6"
             }, {
-                selector: "p",
+                selector: "p[role=header]",
                 color: "navy",
                 label: "h1"
             }],
@@ -510,7 +510,6 @@
             i = e.dndFlag,
             s = 0;
         return t.forEach(function (e) {
-            console.log("running function s");
             var t = document.querySelectorAll(e.selector);
             "function" == typeof e.filter && (t = Array.prototype.filter.call(t, e.filter)), Array.prototype.forEach.call(t, function (t) {
                 if (n(t)) {
@@ -527,7 +526,6 @@
     }
 
     function u(e) {
-        console.log("running function u");
         var t = "div." + e,
             r = document.querySelectorAll(t);
         Array.prototype.forEach.call(r, function (e) {
