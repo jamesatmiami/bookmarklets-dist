@@ -327,6 +327,7 @@
                 return "heading";
             case "header":
                 if (!(0, u.isDescendantOf)(e, ["article", "section"])) return "banner";
+                if(u.hasAttribute("aria-level")) return "heading";
                 break;
             case "hr":
                 return "separator";
