@@ -43,7 +43,7 @@
                 color: "brown",
                 label: "h6"
             }, {
-                selector: "p[role=header]",
+                selector: "p[role=heading]",
                 color: "navy",
                 label: "h1"
             }],
